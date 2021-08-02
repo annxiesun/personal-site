@@ -1,8 +1,22 @@
 :root {
   --spacing1: 12px;
   --spacing-1: -12px;
-  --spacing2: 2 * var(--spacing-1);
-  --spacing-2: 2 * var(--spacing-2);
+  --spacing2: 24px;
+  --spacing-2: -24px;
+  --spacing3: 36px;
+  --spacing-3: -36px;
+  --spacing4: 48px;
+  --spacing-4: -48px;
+  --spacing5: 60px;
+  --spacing-5: -60px;
+  --spacing6: 72px;
+  --spacing-6: -72px;
+
+  --xs: 0px;
+  --sm: 600px;
+  --md: 960px;
+  --lg: 1280px;
+  --xl: 1920px;
 }
 
 @keyframes App-logo-spin {
@@ -55,27 +69,19 @@
 .h1 {
   font-family: 'Pano';
   font-size: 64px;
-}
-
-.h1.white{
   color: white;
 }
 
 .h2 {
   font-family: 'Pano';
   font-size: 32px;
-}
-
-.h2.white{
   color: white;
 }
+
 
 .h3 {
   font-family: 'Pano';
   font-size: 24px;
-}
-
-.h3.white{
   color: white;
 }
 
@@ -83,17 +89,25 @@
   font-size: 24px;
   font-style: bold;
   font-family: 'Pano';
+  color: white;
+}
+
+.body {
+  font-size: 16px;
+  font-family: 'Montserrat';
+  color: white;
 }
 
 .italic {
   font-style: italic;
 }
 
-.body {
-  font-size: 16px;
-  font-family: 'Pano';
+
+.bold {
+  font-weight: bold;
 }
 
-.body.white {
-  color: white;
+.container {
+  display: flex;
+  width: 100%;
 }

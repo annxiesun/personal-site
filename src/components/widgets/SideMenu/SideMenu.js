@@ -10,7 +10,7 @@ function SideMenu({ menuItems, className }) {
   return (
     <div className={`${className} menu`}>
       {menuItems.map((menuItem) => (
-        <div className="menu-item body white" key={menuItem} onClick={() => { goToSection(menuItem.id) }}>{menuItem.label}</div>
+        <div className="menu-item body" key={menuItem} onClick={() => { goToSection(menuItem.id) }}>{menuItem.label}</div>
       ))
       }
     </div >

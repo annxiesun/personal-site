@@ -59,8 +59,8 @@ function Title({ id }) {
     const animateStarLeft = () => { animateStar(starContainer, height, 0, (width / 2), lastStartPoint.left) };
     const animateStarRight = () => { animateStar(starContainer, height, width / 2 * 1.4, width * 1.4, lastStartPoint.right) };
 
-    setInterval(animateStarLeft, 500);
-    setInterval(animateStarRight, 500);
+    //setInterval(animateStarLeft, 500);
+    //setInterval(animateStarRight, 500);
 
     function handleVisibilityChange() {
       console.log(document.hidden);
@@ -76,8 +76,8 @@ function Title({ id }) {
   return (
     <div id={id}>
       <div className="header-container">
-        <div className="h3 white header-text">Hi! My name is Annie Sun</div>
-        <div className="body white header-text">making ideas come to life from design to implemention</div>
+        <div className="h3 header-text">Hi! My name is Annie Sun</div>
+        <div className="body header-text">making ideas come to life from design to implemention</div>
         <br/>
       </div>
       <div id="star-container" className="star-container" />

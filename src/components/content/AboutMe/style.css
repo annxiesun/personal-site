@@ -1,29 +1,47 @@
 
-.shooting-star {
-  position: absolute;
-  background-color: white;
-  top: -50;
-  width: 300px;
-  height: 1px;
-  transform: rotate(-45deg);
+.section-container {
+  width: 80%;
+}
+.about-image {
+  background-color: black;
+  width: 50%;
+  height: 200px;
 }
 
-.header-container {
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  flex-direction: column;
-  padding: 50px;
+.about-text {
+  width: 50%;
+  padding: var(--spacing6);
 }
 
-.star-container {
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  height: 150vh;
-  overflow: hidden;
+.info-section {
+  align-items: center;
 }
 
-.header-text {
-  width: 100%;
+.first {
+  order: 1;
+  padding: var(--spacing6) var(--spacing6) var(--spacing6) 0;
+}
+
+.second {
+  order: 2;
+  padding: var(--spacing6) 0 var(--spacing6) var(--spacing6);
+}
+@media screen and (max-width: 600px) {
+  .info-section {
+    flex-direction: column;
+  }
+  .section-container {
+    width: 95%;
+  }
+  .about-image {
+    width: 100%;
+    padding: var(--spacing4) 0;
+    order: 2;
+  }
+  
+  .about-text {
+    width: 100%;
+    padding: var(--spacing4) 0;
+    order: 1;
+  }
 }
