@@ -12,7 +12,7 @@ function MasterView() {
   const menuItems = [
     { label: 'Intro', id: 'title' },
     { label: 'Why Me?', id: 'about-me' },
-    { label: 'Projects', id: 'projects' },
+    { label: 'My Work', id: 'projects' },
     { label: 'Contact Me', id: 'contact' }];
 
   return (

@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Lottie from "lottie-react";
+import blink from '../../../animations/blink.json'
 import './style.css';
 
 function InfoSection({ title, desc, parity }) {
   return (
     <div className="container info-section">
       <div className={`about-image ${parity ? 'second' : 'first'}`}>
-
+        <Lottie animationData={blink} className="animation-container"/>;
       </div>
       <div className={`about-text ${parity ? 'first' : 'second'}`}>
-        <div className="h3">{title}</div>
+        <div className="h3 about-title mb_2">{title}</div>
         <div className="body">{desc}</div>
       </div>
     </div>
@@ -35,7 +37,7 @@ function AboutMe({ id }) {
         <div className="h3 bold">Why Hire Me?</div>
         <div className="section-container">
           {content.map((section, i) => (
-            <InfoSection title={section.title} desc={section.desc} parity={i % 2 === 0} />
+            <InfoSection key={section.title} title={section.title} desc={section.desc} parity={i % 2 === 0} />
           ))}
         </div>
         <br />
