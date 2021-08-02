@@ -1,0 +1,13 @@
+.menu-item {
+  cursor: pointer;
+  transform: translateX(0);
+  transition: 0.2s ease-in;
+}
+
+.menu-item:hover {
+  transform: translateX(var(--spacing-1));
+}
+
+.menu {
+  z-index: 1;
+}

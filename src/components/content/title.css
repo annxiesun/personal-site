@@ -1,7 +1,0 @@
-.shooting-star {
-  position: absolute;
-  background-color: black;
-  width: 300px;
-  height: 3px;
-  transform: rotate(-45deg);
-}
