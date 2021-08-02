@@ -8,11 +8,8 @@
   transform: rotate(-45deg);
 }
 
-.header-container {
-  display: flex;
-  justify-content: center;
+.project-container {
   height: 100vh;
-  flex-direction: column;
   padding: 50px;
 }
 

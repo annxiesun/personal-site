@@ -8,11 +8,8 @@
   transform: rotate(-45deg);
 }
 
-.header-container {
-  display: flex;
-  justify-content: center;
+.contact-container {
   height: 100vh;
-  flex-direction: column;
   padding: 50px;
 }
 

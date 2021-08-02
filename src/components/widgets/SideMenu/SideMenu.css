@@ -11,3 +11,9 @@
 .menu {
   z-index: 1;
 }
+
+@media screen and (max-width: 960px) {
+  .menu {
+    display: none;
+  }
+}

@@ -5,7 +5,7 @@ import './style.css';
 function Projects({ id }) {
   return (
     <div id={id}>
-      <div className="header-container">
+      <div className="project-container">
         <div className="h3 header-text">Hi! My name is Annie Sun</div>
         <div className="body header-text">making ideas come to life from design to implemention</div>
         <br/>

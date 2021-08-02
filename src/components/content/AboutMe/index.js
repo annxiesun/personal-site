@@ -18,7 +18,7 @@ function InfoSection({ title, desc, parity }) {
 AboutMe.propTypes = {
   title: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
-  parity: PropTypes.string.isRequired,
+  parity: PropTypes.bool.isRequired,
 }
 
 
@@ -31,7 +31,7 @@ function AboutMe({ id }) {
 
   return (
     <div id={id} >
-      <div className="header-container">
+      <div className="about-me-container">
         <div className="h3 bold">Why Hire Me?</div>
         <div className="section-container">
           {content.map((section, i) => (
