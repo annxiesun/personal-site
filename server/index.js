@@ -57,7 +57,6 @@ app.post(sendRoute, function (req, res) {
   });
 });
 
-const port = 3001;
-app.listen(port, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`Server is running on port: ${port}`);
 });
