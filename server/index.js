@@ -27,13 +27,18 @@ transporter.verify((err, success) => {
 
 const path = require("path");
 
-app.use('/', express.static(path.join(__dirname, "..", "build")));
-app.use('/', express.static("public"));
-app.get('/', (req, res, next) => {
+
+const mainRoute = encodeURI("/");
+
+app.use(mainRoute, express.static(path.join(__dirname, "..", "build")));
+app.use(mainRoute, express.static("public"));
+app.get(mainRoute, (req, res, next) => {
   res.sendFile(path.join(__dirname, "..", "build", "index.html"));
 });
 
-app.post("/send", function (req, res) {
+const sendRoute = encodeURI("/send");
+
+app.post(sendRoute, function (req, res) {
   const { email, name, message } = req.headers;
   let mailOptions = {
     from: email,

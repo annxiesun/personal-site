@@ -10,8 +10,8 @@ function ContactMe({ id }) {
   const submitEmail = async (e) => {
     e.preventDefault();
 
-    const slug = encodeURI("/send");
-    const response = await fetch("slug", {
+    const route = encodeURI("/send");
+    const response = await fetch(route, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
