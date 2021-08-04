@@ -28,7 +28,7 @@ function ContactMe({ id }) {
   const [submitted, setSubmitted] = useState(false);
   const [isStopped, setIsStopped] = useState(true);
 
-  const submitEmail = (e) => {
+  const submitEmail = async (e) => {
     e.preventDefault();
 
     const inputs = [
