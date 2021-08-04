@@ -41,10 +41,9 @@ const sendRoute = encodeURI("/send");
 app.post(sendRoute, function (req, res) {
   const { email, name, message } = req.headers;
   let mailOptions = {
-    from: email,
     to: process.env.EMAIL,
-    subject: name,
-    text: message,
+    subject: "Message from my Website",
+    text: `From: ${name}\nEmail: ${email}\n\n${message}`,
   };
 
   transporter.sendMail(mailOptions, function (err, data) {

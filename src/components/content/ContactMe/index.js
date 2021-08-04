@@ -2,6 +2,19 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './style.css';
 
+function Input({ value, label, updateInfo }) {
+  return (
+    <div className="contact-input-container">
+      <div className={`contact-label ${value === '' ? 'contact-label-unfocused' : 'contact-label-focused'}`}>{label}</div>
+      <input
+        className="contact-input"
+        onChange={(e) => updateInfo(label, e.target.value)}
+        value={value}
+      />
+    </div>
+  );
+}
+
 function ContactMe({ id }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -35,6 +48,25 @@ function ContactMe({ id }) {
       })
   };
 
+  const updateInfo = (label, newValue) => {
+    switch (label) {
+      case 'name':
+        setName(newValue);
+        break;
+      case 'email':
+        setEmail(newValue);
+        break;
+      case 'message':
+        setMessage(newValue);
+        break;
+    }
+  }
+
+  const inputs = [
+    { label: 'name', value: name },
+    { label: 'email', value: email },
+  ];
+
   return (
     <div id={id}>
       <div className="contact-container">
@@ -42,24 +74,17 @@ function ContactMe({ id }) {
         <div className="body header-text">making ideas come to life from design to implemention</div>
         <br />
         <form>
-          <input
-            placeholder="Name"
-            onChange={(e) => setName(e.target.value)}
-            name="name"
-            value={name}
-          />
-          <input
-            placeholder="email"
-            onChange={(e) => setEmail(e.target.value)}
-            name="email"
-            value={email}
-          />
-          <input
-            placeholder="message"
-            onChange={(e) => setMessage(e.target.value)}
-            name="message"
-            value={message}
-          />
+          {inputs.map((input) => (
+            <Input value={input.value} label={input.label} updateInfo={updateInfo} />
+          ))}
+          <div className="contact-textarea-container">
+            <textarea
+              placeholder="Type your message here..."
+              className="contact-textarea"
+              onChange={(e) => updateInfo('message', e.target.value)}
+              value={message}
+            />
+          </div>
           <button onClick={submitEmail}>Click me</button>
         </form>
       </div>
