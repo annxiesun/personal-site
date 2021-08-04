@@ -2,7 +2,7 @@
   position: relative;
   height: 70px;
   margin-bottom: var(--spacing2);
-  width: 80%;
+  width: 100%;
 }
 
 .contact-input {
@@ -16,6 +16,7 @@
   padding: 0 var(--spacing1);
   font-size: 16px;
   transition: 0.5s;
+  box-sizing: border-box;
 }
 
 
@@ -41,8 +42,12 @@
 
 .contact-input:focus {
   outline: none;
-  background-color: rgba(255, 255, 255, 0.212);
+  background-color: rgba(255, 255, 255, 0.1);
   border: solid 1px white;
+}
+
+.contact-textarea:focus {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .contact-container {
@@ -61,6 +66,7 @@
   padding: var(--spacing1);
   font-size: 16px;
   transition: 0.5s;
+  box-sizing: border-box;
 }
 
 .contact-textarea:focus {
@@ -71,10 +77,67 @@
   position: relative;
   height: 250px;
   margin-bottom: var(--spacing2);
-  width: 80%;
+  width: 100%;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgba(255, 255, 255, 0.8);
   transition: 0.5s;
+}
+
+.paper-anim {
+  position: absolute;
+  top: 120px;
+  right: -350px;
+}
+
+.form-container {
+  position: relative;
+  width: 80%;
+}
+
+.submit-button {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  height: 160px;
+  width: 150px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background:none;
+  border:none;
+  cursor: pointer;
+  color: white;
+  font-family: Pano;
+  transition: 0.5s ease-in;
+}
+
+.submit-button:hover {
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+  transition: 0.5s ease-in;
+}
+
+input:disabled {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+textarea:disabled {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes shake {
+  0% { transform: translateX(2px) }
+  20% { transform: translate(-2px) }
+  40% { transform: translate(2px) }
+  60% { transform: translate(-2px) }
+  80% { transform: translate(2px) }
+  100% { transform: translate(-2px) }
+}
+
+.shake {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
 }
