@@ -21,12 +21,13 @@
 }
 
 .project-text {
-  width: 50%;
+  width: 40%;
 }
 
+/* mock website styles */
 .mock-website-container {
-  width: 50%;
-  margin-right: var(--spacing6)
+  width: 60%;
+  margin-left: var(--spacing6)
 }
 
 .mock-website-topbar {
@@ -40,7 +41,7 @@
 .mock-website-page {
   width: 100%;
   border: 1px solid white;
-  height: 200px;
+  height: 300px;
   border-radius: 0 0 3px 3px;
 }
 

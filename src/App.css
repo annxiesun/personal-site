@@ -95,14 +95,14 @@
 }
 
 .subtitle {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
   color: white;
 }
 
 .body {
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Montserrat', sans-serif;
   color: white;
 }
@@ -126,14 +126,6 @@
   
   .h3 {
     font-size: 24px;
-  }
-  
-  .subtitle {
-    font-size: 18px;
-  }
-  
-  .body {
-    font-size: 18px;
   }
   
 }
@@ -292,6 +284,34 @@
   margin-left: var(--spacing5);
 }
 
+/* margin6 classes */
+.m_6 {
+  margin: var(--spacing6);
+}
+
+.mx_6 {
+  margin: 0 var(--spacing6);
+}
+
+.my_6 {
+  margin: var(--spacing6) 0;
+}
+
+.mb_6 {
+  margin-bottom: var(--spacing6);
+}
+
+.mt_6 {
+  margin-top: var(--spacing6);
+}
+
+.mr_6 {
+  margin-right: var(--spacing6);
+}
+
+.ml_6 {
+  margin-left: var(--spacing6);
+}
 /* Flex classes */
 .container {
   display: flex;

@@ -4,7 +4,17 @@ import './style.css';
 
 function ProjectSection({ project }) {
   return (
-    <div className="project-section mb_5">
+    <div className="project-section my_6">
+      <div className="project-text flex column justifyCenter">
+        <div className="project-title subtitle mb_1">
+          {project.title}
+        </div>
+        <div className="project-bullets">
+        </div>
+        <div className="body">
+          {project.desc}
+        </div>
+      </div>
       <div className="mock-website-container">
         <div className="mock-website-topbar flex alignItemsCenter">
           <div className="mock-website-circle" />
@@ -16,23 +26,13 @@ function ProjectSection({ project }) {
             <img className="project-logo" src={`resources/${project.img}`} />
             <div className="button-container">
               <button className="mock-website-button mini">Click Me
-              <div className="mock-website-button-hover" /></button>
+                <div className="mock-website-button-hover" /></button>
             </div>
             <div className="button-container">
               <button className="mock-website-button mini">Click Me
-              <div className="mock-website-button-hover" /></button>
+                <div className="mock-website-button-hover" /></button>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="project-text column">
-        <div className="project-title subtitle mb_1">
-          {project.title}
-        </div>
-        <div className="project-bullets">
-        </div>
-        <div className="body">
-          {project.desc}
         </div>
       </div>
     </div>
@@ -48,7 +48,9 @@ function Projects({ id }) {
   ]
   const projects2 = [
     { title: 'Enzuzo — Data Privacy Start-up', desc: 'For the last four months, I worked as a web developer for Enzuzo, helping to design and implement a new onboarding experience & a new dashboard. Being a start-up, I also became the resident graphic designer.', img: 'enzuzo.svg' },
-    { title: 'Fashion for Change', desc: 'For the last four months, I worked as a web developer for Enzuzo, helping to design and implement a new onboarding experience & a new dashboard. Being a start-up, I also became the resident graphic designer.', img: 'fc.svg' }
+    { title: 'Fashion for Change', desc: 'For the last four months, I worked as a web developer for Enzuzo, helping to design and implement a new onboarding experience & a new dashboard. Being a start-up, I also became the resident graphic designer.', img: 'fc.svg' },
+    { title: 'IdVision', desc: 'For the last four months, I worked as a web developer for Enzuzo, helping to design and implement a new onboarding experience & a new dashboard. Being a start-up, I also became the resident graphic designer.', img: 'enzuzo.svg' },
+    { title: 'Inclusify', desc: 'For the last four months, I worked as a web developer for Enzuzo, helping to design and implement a new onboarding experience & a new dashboard. Being a start-up, I also became the resident graphic designer.', img: 'fc.svg' },
   ];
 
   return (
