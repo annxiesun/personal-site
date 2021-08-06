@@ -30,6 +30,7 @@ function MasterView() {
             <Projects id="projects" />
             <img className="section-divider" src="resources/border.svg" />
             <ContactMe id="contact" />
+            <div className="footer" />
           </div>
         </Col>
       </Row>
