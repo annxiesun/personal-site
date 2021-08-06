@@ -22,6 +22,7 @@
 
 .project-text {
   width: 50%;
+  white-space: pre-wrap;
 }
 
 /* mock website styles */

@@ -47,8 +47,8 @@ function Projects({ id }) {
     { title: 'Fashion for Change Site Redesign', tools: ['React', 'Material UI'], link: 'https://github.com/annxiesun/fc-site' }
   ]
   const projects2 = [
-    { title: 'Enzuzo — Data Privacy Start-up', desc: 'For the last four months, I worked as a web developer for Enzuzo, helping to design and implement a new onboarding experience & a new dashboard. Being a start-up, I also became the resident graphic designer.', img: 'enzuzo.svg' },
-    { title: 'Fashion for Change', desc: 'For the last four months, I worked as a web developer for Enzuzo, helping to design and implement a new onboarding experience & a new dashboard. Being a start-up, I also became the resident graphic designer.', img: 'fc.svg' },
+    { title: 'Enzuzo — Data Privacy Start-up', desc: 'For the last four months, I worked as a web developer for Enzuzo, helping to design and implement a new onboarding experience & a new dashboard.\n\nBeing a start-up, I also became the resident graphic designer.', img: 'enzuzo.svg' },
+    { title: 'Fashion for Change', desc: 'In this non-profit organization, I took on the task of implementing the redesign of their website.\n\nFor the new site, I designed the architecture, implemented every page, and properly documented everything so future students can make easy updates.', img: 'fc.svg' },
     { title: 'IdVision', desc: 'For the last four months, I worked as a web developer for Enzuzo, helping to design and implement a new onboarding experience & a new dashboard. Being a start-up, I also became the resident graphic designer.', img: 'enzuzo.svg' },
     { title: 'Inclusify', desc: 'For the last four months, I worked as a web developer for Enzuzo, helping to design and implement a new onboarding experience & a new dashboard. Being a start-up, I also became the resident graphic designer.', img: 'fc.svg' },
   ];
