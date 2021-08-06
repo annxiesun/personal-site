@@ -11,15 +11,91 @@
 
 .project-section {
   width: 100%;
+  display: flex;
 }
 
-.project-image-container {
-  width: 50%;
-}
-.project-image {
+.project-logo {
   height: auto;
+  max-height: 50px;
   width: 100%;
 }
+
+.project-text {
+  width: 50%;
+}
+
+.mock-website-container {
+  width: 50%;
+  margin-right: var(--spacing6)
+}
+
+.mock-website-topbar {
+  height: 20px;
+  width: 100%;
+  border: 1px solid white;
+  border-bottom: 0;
+  border-radius: 3px 3px 0 0;
+}
+
+.mock-website-page {
+  width: 100%;
+  border: 1px solid white;
+  height: 200px;
+  border-radius: 0 0 3px 3px;
+}
+
+.mock-website-content {
+  width: 50%;
+}
+
+.button-container {
+  width: 100%;
+  position: relative;
+  margin: var(--spacing1) 0 0 0;
+  width: 80%;
+}
+.mock-website-button {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 8px 12px;
+  width: 100%;
+  margin: 0;
+  transition: 0.2s ease-in;
+}
+
+.mock-website-button:hover {
+  transform: translate(-1px, -1px);
+}
+.mock-website-button-hover {
+  border: 1px solid white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+  z-index: 0;
+  transition: transform 0.2s ease-in;
+  border-top: 0;
+  border-left: 0;
+  box-sizing: border-box;
+  
+}
+
+.mock-website-circle {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: white;
+  margin-left: var(--spacing1);
+}
+.button-container:hover  .mock-website-button-hover {
+  transform: translate(3px, 4px);
+  border-radius: 0 0 3px 0;
+}
+
 @media screen and (max-width: 960px) {
   .project-image-container {
     width: 100%;

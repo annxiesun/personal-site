@@ -95,14 +95,14 @@
 }
 
 .subtitle {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
   color: white;
 }
 
 .body {
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Montserrat', sans-serif;
   color: white;
 }
@@ -296,4 +296,24 @@
 .container {
   display: flex;
   width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.alignItemsCenter {
+  align-items: center;
 }

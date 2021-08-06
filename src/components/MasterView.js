@@ -24,8 +24,11 @@ function MasterView() {
         <Col md={10}>
           <div className="gradient-background">
             <Title id="title" />
+            <img className="section-divider" src="resources/border.svg" />
             <AboutMe id="about-me" />
+            <img className="section-divider" src="resources/border.svg" />
             <Projects id="projects" />
+            <img className="section-divider" src="resources/border.svg" />
             <ContactMe id="contact" />
           </div>
         </Col>

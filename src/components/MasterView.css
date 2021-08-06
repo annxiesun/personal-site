@@ -39,9 +39,18 @@ html, body {
   box-sizing: border-box;
 }
 
+.section-divider {
+  width: 80%;
+  box-sizing: border-box;
+  padding: 0 var(--spacing4);
+}
 @media only screen and (max-width: 960px) {
   .section-container {
     width: 100%;
     padding: var(--spacing3);
+  }
+  .section-divider {
+    padding: 0 var(--spacing1);
+    width: 100%;
   }
 }
