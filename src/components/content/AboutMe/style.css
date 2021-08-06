@@ -1,15 +1,12 @@
 
-.section-container {
-  width: 80%;
-}
 .about-image {
   background-color: none;
-  width: 50%;
-  height: 200px;
+  width: auto;
+  height: 400px;
 }
 
 .about-text {
-  width: 50%;
+  width: 40%;
   padding: var(--spacing6);
 }
 
@@ -19,12 +16,12 @@
 
 .first {
   order: 1;
-  padding: var(--spacing6) var(--spacing6) var(--spacing6) 0;
+  padding: var(--spacing3) var(--spacing6) var(--spacing3) 0;
 }
 
 .second {
   order: 2;
-  padding: var(--spacing6) 0 var(--spacing6) var(--spacing6);
+  padding: var(--spacing3) 0 var(--spacing3) var(--spacing6);
 }
 
 .animation-container {
@@ -53,5 +50,4 @@
 
 .about-me-container {
   height: auto;
-  padding: 50px;
 }

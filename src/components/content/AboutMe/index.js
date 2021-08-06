@@ -1,14 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Lottie from "lottie-react";
+import Lottie from "react-lottie";
 import blink from '../../../animations/blink.json'
 import './style.css';
 
 function InfoSection({ title, desc, parity }) {
+  const animation = {
+    animationData: blink,
+    loop: true,
+    autoplay: true,
+    rendererSettings: {
+      viewBoxSize: '0 0 950 750',
+    }
+  };
+
   return (
     <div className="container info-section">
       <div className={`about-image ${parity ? 'second' : 'first'}`}>
-        <Lottie animationData={blink} className="animation-container"/>;
+        <Lottie options={animation} className="animation-container" loop={false} isClickToPauseDisabled />;
       </div>
       <div className={`about-text ${parity ? 'first' : 'second'}`}>
         <div className="h3 about-title mb_2">{title}</div>
@@ -32,10 +41,10 @@ function AboutMe({ id }) {
   ];
 
   return (
-    <div id={id} >
-      <div className="about-me-container">
+    <div id={id} className="section">
+      <div className="about-me-container section-container">
         <div className="h3 bold">Why Hire Me?</div>
-        <div className="section-container">
+        <div>
           {content.map((section, i) => (
             <InfoSection key={section.title} title={section.title} desc={section.desc} parity={i % 2 === 0} />
           ))}

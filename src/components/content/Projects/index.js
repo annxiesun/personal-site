@@ -36,8 +36,8 @@ function Projects({ id }) {
   ];
 
   return (
-    <div id={id}>
-      <div className="projects-container">
+    <div id={id} className="section">
+      <div className="projects-container section-container">
         <div className="h3 bold mb_3">My Work</div>
         <div className="project-card-container">
           {projects2.map((project) => (

@@ -5,10 +5,10 @@ import Lottie from "react-lottie";
 import paperAirplane from '../../../animations/airplane.json';
 import './style.css';
 
-function Input({ id, value, label, disabled, updateInfo }) {
+function Input({ value, label, disabled, updateInfo }) {
   return (
     <div className="contact-input-container">
-      <div className={`contact-label ${value === '' ? 'contact-label-unfocused' : 'contact-label-focused'}`}>{label}</div>
+      <div id={`${label}-label`} className={`contact-label ${value === '' ? 'contact-label-unfocused' : 'contact-label-focused'}`}>{label}</div>
       <input
         className="contact-input"
         onChange={(e) => updateInfo(label, e.target.value)}
@@ -41,13 +41,17 @@ function ContactMe({ id }) {
 
     let invalid = false;
     const checkInput = (label, value) => {
-      const shakeInput = (inputEl) => {
-        setTimeout(() => { inputEl.classList.add('shake') }, 500);
-        inputEl.classList.remove('shake');
+      const shakeInput = (el) => {
+        setTimeout(() => { el.classList.add('shake') }, 500);
+        el.classList.remove('shake');
       }
 
       if (!validateInfo(label, value)) {
         const inputEl = document.getElementById(`${label}-input`);
+        if (label !== 'message') {
+          const labelEl = document.getElementById(`${label}-label`);
+          shakeInput(labelEl);
+        }
         shakeInput(inputEl);
         invalid = true;
         setSubmitted(false);
@@ -127,8 +131,8 @@ function ContactMe({ id }) {
   };
 
   return (
-    <div id={id}>
-      <div className="contact-container">
+    <div id={id} className="section">
+      <div className="contact-container section-container">
         <div className="h3 bold">Contact Me</div>
         <div className="body header-text">making ideas come to life from design to implemention</div>
         <br />
@@ -155,7 +159,7 @@ function ContactMe({ id }) {
             Send
           </button>
           <div className="paper-anim">
-            <Lottie options={paperAirplaneAnimation} isStopped={isStopped} isClickToPauseDisabled={true} />
+            <Lottie options={paperAirplaneAnimation} isStopped={isStopped} isClickToPauseDisabled />
           </div>
         </form>}
       </div>

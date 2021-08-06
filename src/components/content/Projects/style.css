@@ -1,7 +1,6 @@
 
 .projects-container {
   height: auto;
-  padding: 50px;
 }
 
 .project-card-container {
@@ -12,10 +11,6 @@
 
 .project-section {
   width: 100%;
-}
-
-.projects-container {
-  width: 80%;
 }
 
 .project-image-container {
