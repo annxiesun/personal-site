@@ -23,8 +23,10 @@
     "yarn": "^1.22.11"
   },
   "scripts": {
-    "start": "npm run build && (cd server && nodemon index)",
+    "start": "cd server && nodemon index",
+    "postinstall": "npm run build",
     "start-client": "react-scripts start",
+    "start-full": "npm run build && (cd server && nodemon index)",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
