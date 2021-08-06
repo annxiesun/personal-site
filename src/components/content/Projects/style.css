@@ -21,12 +21,12 @@
 }
 
 .project-text {
-  width: 40%;
+  width: 50%;
 }
 
 /* mock website styles */
 .mock-website-container {
-  width: 60%;
+  width: 50%;
   margin-left: var(--spacing6);
 }
 
@@ -41,7 +41,7 @@
 .mock-website-page {
   width: 100%;
   border: 1px solid white;
-  height: 300px;
+  height: 400px;
   border-radius: 0 0 3px 3px;
 }
 

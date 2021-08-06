@@ -16,23 +16,19 @@ function MasterView() {
     { label: 'Contact Me', id: 'contact' }];
 
   return (
-    <Container className="site-container">
+    <Container className="site-container justifyCenter">
       <Row>
-        <Col md={2}>
-          <SideMenu menuItems={menuItems} className="side-menu" />
-        </Col>
-        <Col md={10}>
-          <div className="gradient-background">
-            <Title id="title" />
-            <img className="section-divider" src="resources/border.svg" />
-            <AboutMe id="about-me" />
-            <img className="section-divider" src="resources/border.svg" />
-            <Projects id="projects" />
-            <img className="section-divider" src="resources/border.svg" />
-            <ContactMe id="contact" />
-            <div className="footer" />
-          </div>
-        </Col>
+        <SideMenu menuItems={menuItems} className="side-menu" />
+        <div className="gradient-background">
+          <Title id="title" />
+          <img className="section-divider" src="resources/border.svg" />
+          <AboutMe id="about-me" />
+          <img className="section-divider" src="resources/border.svg" />
+          <Projects id="projects" />
+          <img className="section-divider" src="resources/border.svg" />
+          <ContactMe id="contact" />
+          <div className="footer" />
+        </div>
       </Row>
     </Container>
   );

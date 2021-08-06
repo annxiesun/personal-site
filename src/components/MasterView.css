@@ -31,7 +31,7 @@ html, body {
 }
 
 .section {
-  margin-bottom: 10vh 0;
+  margin-bottom: 10vh;
 }
 
 .section-container {
@@ -39,6 +39,7 @@ html, body {
   padding: var(--spacing5);
   padding-left: var(--spacing5);
   box-sizing: border-box;
+  height: auto;
 }
 
 .section-divider {
@@ -52,12 +53,12 @@ html, body {
     padding: var(--spacing3);
   }
   .section-divider {
-    padding: 0 var(--spacing1);
+    padding: 0 var(--spacing3);
     width: 100%;
   }
 }
 
 .footer {
-  height: 15vh;
+  height: 10vh;
   width: 100%;
 }

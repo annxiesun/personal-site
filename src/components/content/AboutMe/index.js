@@ -34,6 +34,8 @@ AboutMe.propTypes = {
 
 
 function AboutMe({ id }) {
+  const aboutMe = "Well, for one I have a lot passion AND the skills to back it up! I’m a computer science student, specializing in Human-Computer Interaction and I just love creating things!";
+
   const content = [
     { title: 'Mockups in a blink of an eye', desc: 'From wireframing to prototyping, low to high fidelity, get comprehensive and beautifully designed user-experiences quick & easily' },
     { title: 'Seamless implementations', desc: 'Efficiently creating responsive and interactive user-interfaces using modern languages and frameworks' },
@@ -43,7 +45,8 @@ function AboutMe({ id }) {
   return (
     <div id={id} className="section">
       <div className="about-me-container section-container">
-        <div className="h3 bold">Why Hire Me?</div>
+        <div className="h3 bold">Why Choose Me?</div>
+        <div className="body">{aboutMe}</div>
         <div>
           {content.map((section, i) => (
             <InfoSection key={section.title} title={section.title} desc={section.desc} parity={i % 2 === 0} />
