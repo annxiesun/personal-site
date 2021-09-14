@@ -98,6 +98,39 @@
   border-radius: 0 0 3px 0;
 }
 
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  margin-right: var(--spacing6);
+}
+
+.circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 25%;
+  background-color: white;
+}
+
+.small-circle {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: none;
+  border: 2px solid white;
+}
+
+.line {
+  width: 2px;
+  background-color: white;
+  height: 600px;
+}
+
+.content-container {
+  display: flex;
+}
+
 @media screen and (max-width: 960px) {
   .project-section {
     flex-direction: column;
@@ -113,4 +146,10 @@
     margin-left: 0;
     margin-top: var(--spacing6);
   }
+  .line {
+    width: 2px;
+    background-color: white;
+    height: 900px;
+  }
+  
 }

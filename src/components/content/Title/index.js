@@ -76,8 +76,8 @@ function Title({ id }) {
   return (
     <div id={id} className="section">
       <div className="header-container section-container">
-        <div className="h2 header-text">Hello, My name is Annie Sun!</div>
-        <div className="body header-text">— making ideas come to life from design to implemention</div>
+        <div className="h2 header-text">Hello, I'm Annie Sun!</div>
+        <div className="body header-text">— I make ideas come true</div>
         <br/>
       </div>
       <div id="star-container" className="star-container" />

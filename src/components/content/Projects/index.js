@@ -1,65 +1,108 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './style.css';
+import styles from './style.module.css';
+import Github from '../../widgets/Icons/Github';
 
-function ProjectSection({ project }) {
+function InfoSection({ project }) {
+  const {
+    title,
+    desc,
+    win,
+    link,
+    points,
+    tools
+  } = project;
+
   return (
-    <div className="project-section my_6">
-      <div className="project-text flex column justifyCenter">
-        <div className="project-title subtitle mb_1">
-          {project.title}
+    <div className={styles.boundingBox}>
+      <div className={`${styles.projectSection}`}>
+        <div className={`container ${styles.titleBox} mb_1`}>
+          <div className="h3 mr_1">{title}</div>
+          <a className={styles.icon} href={link} target="_blank"><Github /></a>
         </div>
-        <div className="project-bullets">
-        </div>
-        <div className="body">
-          {project.desc}
-        </div>
-      </div>
-      <div className="mock-website-container">
-        <div className="mock-website-topbar flex alignItemsCenter">
-          <div className="mock-website-circle" />
-          <div className="mock-website-circle" />
-          <div className="mock-website-circle" />
-        </div>
-        <div className="mock-website-page flex justifyCenter alignItemsCenter column">
-          <div className="mock-website-content flex justifyCenter alignItemsCenter column">
-            <img className="project-logo" src={`resources/${project.img}`} />
-            <div className="button-container">
-              <button className="mock-website-button mini">Click Me
-                <div className="mock-website-button-hover" /></button>
-            </div>
-            <div className="button-container">
-              <button className="mock-website-button mini">Click Me
-                <div className="mock-website-button-hover" /></button>
-            </div>
-          </div>
+        <div className="body">{desc}</div>
+        <div className={styles.chipContainer}>
+          {tools.map((tool) => (
+            <div className={`${styles.toolChip} mini`}>{tool}</div>
+          ))}
         </div>
       </div>
     </div>
   )
 }
-
-ProjectSection.propType = {
-  project: PropTypes.object.isRequired
+AboutMe.propTypes = {
+  title: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  parity: PropTypes.bool.isRequired,
+  animation: PropTypes.object.isRequired,
 }
-function Projects({ id }) {
-  const projects = [
-    { title: 'Fashion for Change Site Redesign', tools: ['React', 'Material UI'], link: 'https://github.com/annxiesun/fc-site' }
-  ]
-  const projects2 = [
-    { title: 'Enzuzo — Data Privacy Start-up', desc: 'For the last four months, I worked as a web developer for Enzuzo, helping to design and implement a new onboarding experience & a new dashboard.\n\nBeing a start-up, I also became the resident graphic designer.', img: 'enzuzo.svg' },
-    { title: 'Fashion for Change', desc: 'In this non-profit organization, I took on the task of implementing the redesign of their website.\n\nFor the new site, I designed the architecture, implemented every page, and properly documented everything so future students can make easy updates.', img: 'fc.svg' },
-    { title: 'IdVision', desc: 'For the last four months, I worked as a web developer for Enzuzo, helping to design and implement a new onboarding experience & a new dashboard. Being a start-up, I also became the resident graphic designer.', img: 'enzuzo.svg' },
-    { title: 'Inclusify', desc: 'For the last four months, I worked as a web developer for Enzuzo, helping to design and implement a new onboarding experience & a new dashboard. Being a start-up, I also became the resident graphic designer.', img: 'fc.svg' },
-  ];
 
+
+function AboutMe({ id }) {
+  const content = [
+    {
+      title: 'Coda',
+      desc: 'Quick-add songs to your spotify playlist',
+      win: false,
+      link: 'https://github.com/annxiesun/coda',
+      points: [
+        'Implemented server-side functionalities with Axios',
+        'Integrated user-interface to with server'
+      ],
+      tools: [
+        'React',
+        'Next.js',
+        'Typescript',
+      ]
+    },
+    {
+      title: 'Ingrid',
+      desc: 'A heat-map visualizer for Educational Apps',
+      win: true,
+      link: 'https://github.com/ul-hacks',
+      points: [
+        'Designed the UI and created mockups using Figma',
+        'Implemented front-end features and user-interface'
+      ],
+      tools: [
+        'React',
+        'MaterialUI',
+        'JavaScript',
+        'GraphQL'
+      ]
+    },
+    {
+      title: 'Inclusify',
+      desc: 'An app that detects non-inclusive language and suggests alternative words',
+      win: true,
+      link: 'https://github.com/annxiesun/inclusify',
+      points: [
+        'Designed an intuitive user-experience',
+        'Implemented entire front-end'
+      ],
+      tools: [
+        'React',
+        'JavaScript'
+      ]
+    },
+    {
+      title: 'FeatherFinder',
+      desc: 'An elevated quiz experience that tells you what kind of bird you are',
+      win: true,
+      link: 'https://github.com/annxiesun/birdquiz',
+      tools: [
+        'React',
+        'JavaScript'
+      ]
+    },
+  ];
   return (
     <div id={id} className="section">
-      <div className="projects-container section-container">
-        <div className="h3 bold mb_3">My Work</div>
-        <div className="project-card-container">
-          {projects2.map((project) => (
-            <ProjectSection key={project} project={project} />
+      <div className="section-container">
+        <div className="h3 bold">My Projects</div>
+        <div className={styles.projectContainer}>
+          {content.map((project) => (
+            <InfoSection key={project.title} project={project} />
           ))}
         </div>
         <br />
@@ -68,8 +111,8 @@ function Projects({ id }) {
   );
 }
 
-Projects.propTypes = {
+AboutMe.propTypes = {
   id: PropTypes.string.isRequired
 }
 
-export default Projects;
+export default AboutMe;

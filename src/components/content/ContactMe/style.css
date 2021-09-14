@@ -13,7 +13,7 @@
   background-color: transparent;
   border: solid 1px white;
   color: white;
-  font-family: 'Montserrat';
+  font-family: 'Poppins';
   position: absolute;
   height: 100%;
   padding: var(--spacing1) var(--spacing1) 0 var(--spacing1);
@@ -26,14 +26,14 @@
 .contact-label {
   position: absolute;
   color: white;
-  font-family: 'Montserrat';
+  font-family: 'Poppins';
   transition: 0.5s;
   margin-left: var(--spacing1);
   text-transform: capitalize;
 }
 
 .contact-label-unfocused {
-  margin-top: calc((var(--input-height) - 16px) / 2);
+  margin-top: calc((var(--input-height) - 24px) / 2);
   font-size: 16px;
 }
 
@@ -60,7 +60,7 @@
   background-color: transparent;
   border: solid 1px white;
   color: white;
-  font-family: 'Montserrat';
+  font-family: 'Poppins';
   height: 100%;
   padding: var(--spacing1);
   font-size: 16px;
@@ -108,7 +108,7 @@
   border:none;
   cursor: pointer;
   color: white;
-  font-family: Pano;
+  font-family: 'Poppins';
   transition: 0.5s ease-in;
 }
 

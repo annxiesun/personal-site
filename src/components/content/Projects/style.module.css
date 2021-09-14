@@ -1,0 +1,49 @@
+.projectSection {
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: var(--spacing2);
+  width: 100%;
+  height: 400px;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.projectContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.boundingBox {
+  box-sizing: border-box;
+  padding: var(--spacing2) var(--spacing2) 0 0;
+  width: 50%;
+}
+
+.toolChip {
+  background-color: rgba(255, 255, 255, 0.15);
+  width: fit-content;
+  padding: 0px 5px;
+  border-radius: 5px;
+  border: 1px solid white;
+  margin-right: 4px;
+  margin-top: 4px;
+}
+
+.chipContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.icon {
+  fill:white;
+}
+
+.titleBox {
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 800px) {
+  .boundingBox {
+    width: 100%;
+    
+  }
+}

@@ -27,89 +27,45 @@
   --xl: 1920px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Declaring Pano Font */
-@font-face {
-  font-family: 'Pano';
-  src: local('Pano'), url(./fonts/Pano-Regular.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'Pano';
-  font-weight: 300;
-  src: local('Pano'), url(./fonts/Pano-Light.otf) format('opentype');
-}
-
-@font-face {
-    font-family: 'Pano';
-    font-weight: 700;
-    src: local('Pano'), url(./fonts/Pano-Bold.otf) format('opentype');
-}
-
-@font-face {
-    font-family: 'Pano';
-    font-style: italic;
-    font-weight: 700;
-    src: local('Pano'), url(./fonts/Pano-Bold-Italic.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'Pano';
-  font-style: italic;
-  src: local('Pano'), url(./fonts/Pano-Regular-Italic.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'Pano';
-  font-style: italic;
-  font-weight: 300;
-  src: local('Pano'), url(./fonts/Pano-Light-Italic.otf) format('opentype');
-}
-
 /* Text Styles */
 .h1 {
-  font-family: 'Pano', 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 124px;
   color: white;
+  font-weight: bold;
 }
 
 .h2 {
-  font-family: 'Pano', 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 48px;
   color: white;
+  font-weight: bold;
 }
 
 
 .h3 {
-  font-family: 'Pano', 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 24px;
   color: white;
+  font-weight: bold;
 }
 
 .subtitle {
   font-size: 20px;
   font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: white;
 }
 
 .body {
   font-size: 20px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: white;
 }
 
 .mini {
   font-size: 16px;
-  font-family: 'Montserrat';
+  font-family: 'Poppins', sans-serif;
   color: white;
 }
 
