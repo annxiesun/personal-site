@@ -106,7 +106,7 @@ function AboutMe({ id }) {
       link: 'https://github.com/ul-hacks',
       points: [
         'Designed the UI and created mockups using Figma',
-        'Implemented the front-end, committing 1.2k+ lines',
+        'Implemented the front-end',
         'Created login and sign-in pages with error checking'
       ],
       tools: [
@@ -123,7 +123,7 @@ function AboutMe({ id }) {
       hackathon: 'Inclusivity Winner @ PearlHacks',
       link: 'https://github.com/annxiesun/inclusify',
       points: [
-        'Designed and implemented a Grammarly-like UI that checks inputted text and suggests changes',
+        'Implemented a Grammarly-like UI that checks inputted text and suggests changes',
         'Created branding & graphics for project'
       ],
       tools: [
@@ -138,7 +138,7 @@ function AboutMe({ id }) {
       link: 'https://github.com/annxiesun/birdquiz',
       points: [
         'Designed and implemented quiz UI',
-        'Elevated quiz experience by implementing many animations and interactiveness',
+        'Elevated quiz by adding animations and interactivity',
         'Created 8 custom tarot-card inspired illustrations for quiz results'
       ],
       tools: [

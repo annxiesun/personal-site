@@ -1,9 +1,16 @@
 
 .about-image {
   background-color: none;
-  width: auto;
+  width: 80%;
   height: 400px;
   padding: var(--spacing3);
+  display: flex;
+  align-items: center;
+}
+
+.about-image2 {
+  background-color: none;
+  width: 100%;
 }
 
 .about-text {
@@ -23,7 +30,7 @@
 .column-container {
   display: flex;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .info-section {
     flex-direction: column;
   }
