@@ -1,40 +1,62 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './style.css';
+import Fade from 'react-reveal/Fade';
+import Github from '../../widgets/Icons/Github';
 
 function ProjectSection({ project }) {
+  const {
+    title,
+    desc,
+    companySite,
+    gitLink,
+  } = project;
+
+  const openLink = (link) => {
+    window.open(
+      link,
+      '_blank' // <- This is what makes it open in a new window.
+    );
+  }
   return (
     <div className="project-section my_6">
-      <div className="project-text flex column justifyCenter">
-        <div className="project-title subtitle mb_1">
-          {project.title}
+      <Fade>
+        <div className="project-text flex column justifyCenter">
+          <div className="project-title subtitle mb_1">
+            {title}
+          </div>
+          <div className="project-bullets">
+          </div>
+          <div className="body">
+            {desc}
+          </div>
         </div>
-        <div className="project-bullets">
-        </div>
-        <div className="body">
-          {project.desc}
-        </div>
-      </div>
-      <div className="mock-website-container">
-        <div className="mock-website-topbar flex alignItemsCenter">
-          <div className="mock-website-circle" />
-          <div className="mock-website-circle" />
-          <div className="mock-website-circle" />
-        </div>
-        <div className="mock-website-page flex justifyCenter alignItemsCenter column">
-          <div className="mock-website-content flex justifyCenter alignItemsCenter column">
-            <img className="project-logo" src={`resources/${project.img}`} />
-            <div className="button-container">
-              <button className="mock-website-button mini">Click Me
-                <div className="mock-website-button-hover" /></button>
-            </div>
-            <div className="button-container">
-              <button className="mock-website-button mini">Click Me
-                <div className="mock-website-button-hover" /></button>
+      </Fade>
+      <Fade delay={500}>
+        <div className="mock-website-container">
+          <div className="mock-website-topbar flex alignItemsCenter">
+            <div className="mock-website-circle" />
+            <div className="mock-website-circle" />
+            <div className="mock-website-circle" />
+          </div>
+          <div className="mock-website-page flex justifyCenter alignItemsCenter column">
+            <div className="mock-website-content flex justifyCenter alignItemsCenter column">
+              <img className="project-logo" src={`resources/${project.img}`} />
+              <div className="button-container">
+                <button onClick={() => openLink(companySite)} className="mock-website-button mini">Visit Site
+                  <div className="mock-website-button-hover" /></button>
+              </div>
+              {gitLink &&
+                <div className="button-container">
+                  <button onClick={() => openLink(gitLink)} className="mock-website-button mini">Github
+                    <Github className="gitIconSite" />
+                    <div className="mock-website-button-hover" /></button>
+                </div>
+              }
             </div>
           </div>
         </div>
-      </div>
+      </Fade>
     </div>
   )
 }
@@ -43,17 +65,17 @@ ProjectSection.propType = {
   project: PropTypes.object.isRequired
 }
 function Projects({ id }) {
-  const projects = [
-    { title: 'Fashion for Change Site Redesign', tools: ['React', 'Material UI'], link: 'https://github.com/annxiesun/fc-site' }
-  ]
   const projects2 = [
     {
       title: 'Enzuzo — Data Privacy Start-up',
-      desc: 'For the last four months, I worked as a web developer for Enzuzo, helping to design and implement a new onboarding experience & a new dashboard.\n\nBeing a start-up, I also became the resident graphic designer.', img: 'enzuzo.svg'
+      desc: 'For the last four months, I worked as a web developer for Enzuzo, helping to design and implement a new onboarding experience & a new dashboard.\n\nBeing a start-up, I also became the resident graphic designer.', img: 'enzuzo.svg',
+      companySite: 'https://app.enzuzo.com/onboarding'
     },
     {
       title: 'Fashion for Change',
-      desc: 'In this non-profit organization, I took on the task of implementing the redesign of their website.\n\nFor the new site, I designed the architecture, implemented every page, and properly documented everything so future students can make easy updates.', img: 'fc.svg'
+      desc: 'In this non-profit organization, I took on the task of implementing the redesign of their website. (Work in progress!) \n\nFor the new site, I designed the architecture, implemented every page, and properly documented everything so future students can make easy updates.', img: 'fc.svg',
+      companySite: 'https://fc-site-main.herokuapp.com',
+      gitLink: 'https://github.com/annxiesun/fc-site'
     }, ,
   ];
 

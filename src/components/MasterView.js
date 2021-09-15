@@ -11,7 +11,6 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 function MasterView() {
   const menuItems = [
-    { label: 'Intro', id: 'title' },
     { label: 'Why Me?', id: 'about-me' },
     { label: 'My Work', id: 'work' },
     { label: 'Projects', id: 'projects' },

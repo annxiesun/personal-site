@@ -4,6 +4,8 @@ import Lottie from "react-lottie";
 
 import paperAirplane from '../../../animations/airplane.json';
 import './style.css';
+import Fade from 'react-reveal/Fade';
+
 
 function Input({ value, label, disabled, updateInfo }) {
   return (
@@ -132,37 +134,41 @@ function ContactMe({ id }) {
 
   return (
     <div id={id} className="section">
-      <div className="contact-container section-container">
-        <div className="h3 bold">Contact Me</div>
-        <div className="body header-text">making ideas come to life from design to implemention</div>
-        <br />
-        {!sent && <form className="form-container">
-          {inputs.map((input) => (
-            <Input
-              value={input.value}
-              label={input.label}
-              disabled={submitted}
-              updateInfo={updateInfo}
-            />
-          ))}
-          <div className="contact-textarea-container">
-            <textarea
-              placeholder="Type your message here..."
-              className="contact-textarea"
-              onChange={(e) => updateInfo('message', e.target.value)}
-              value={message}
-              disabled={submitted}
-              id="message-input"
-            />
-          </div>
-          <button className="submit-button" onClick={submitEmail} disabled={submitted}>
-            Send
-          </button>
-          <div className="paper-anim">
-            <Lottie options={paperAirplaneAnimation} isStopped={isStopped} isClickToPauseDisabled />
-          </div>
-        </form>}
-      </div>
+      <Fade>
+        <div className="contact-container section-container">
+          <div className="h3 bold">Contact Me</div>
+          <div className="body header-text">making ideas come to life from design to implemention</div>
+          <br />
+          {!sent &&
+            <form className="form-container">
+              {inputs.map((input) => (
+                <Input
+                  value={input.value}
+                  label={input.label}
+                  disabled={submitted}
+                  updateInfo={updateInfo}
+                />
+              ))}
+              <div className="contact-textarea-container">
+                <textarea
+                  placeholder="Type your message here..."
+                  className="contact-textarea"
+                  onChange={(e) => updateInfo('message', e.target.value)}
+                  value={message}
+                  disabled={submitted}
+                  id="message-input"
+                />
+              </div>
+              <button className="submit-button" onClick={submitEmail} disabled={submitted}>
+                Send
+              </button>
+              <div className="paper-anim">
+                <Lottie options={paperAirplaneAnimation} isStopped={isStopped} isClickToPauseDisabled />
+              </div>
+            </form>
+          }
+        </div>
+      </Fade>
     </div>
   );
 }

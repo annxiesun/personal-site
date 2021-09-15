@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './style.module.css';
 import Github from '../../widgets/Icons/Github';
+import Star from '../../widgets/Icons/Star';
+import Fade from 'react-reveal/Fade';
+import { Popover } from 'react-tiny-popover';
 
 function InfoSection({ project }) {
   const {
@@ -10,24 +13,64 @@ function InfoSection({ project }) {
     win,
     link,
     points,
-    tools
+    tools,
+    i,
+    hackathon
   } = project;
 
+  const [winnerHover, setWinnerHover] = useState(false);
+
   return (
-    <div className={styles.boundingBox}>
-      <div className={`${styles.projectSection}`}>
-        <div className={`container ${styles.titleBox} mb_1`}>
-          <div className="h3 mr_1">{title}</div>
-          <a className={styles.icon} href={link} target="_blank"><Github /></a>
-        </div>
-        <div className="body">{desc}</div>
-        <div className={styles.chipContainer}>
-          {tools.map((tool) => (
-            <div className={`${styles.toolChip} mini`}>{tool}</div>
-          ))}
+    <Fade exit >
+      <div className={styles.boundingBox}>
+        <div className={`${styles.projectSection}`}>
+          <div className={styles.contentBox}>
+            <div className={`container ${styles.titleBox} mb_1`}>
+              <div className="container">
+                <div className="h3 mr_2">{title}</div>
+                {win &&
+                  <Popover
+                    isOpen={true}
+                    positions={['right']} // preferred positions by priority
+                    content={
+                      <Fade when={winnerHover} duration={300} distance="10px" left>
+                        <div className="container alignItemsCenter row">
+                          <div className={`${styles.triangle} ml_1`} />
+                          <div className={styles.popover}>
+                            {hackathon}
+                          </div>
+                        </div>
+                      </Fade>
+                    }
+                  >
+                    <div
+                      className={`container alignItemsCenter ${styles.winner}`}
+                      onMouseEnter={() => setWinnerHover(true)}
+                      onMouseLeave={() => setWinnerHover(false)}
+                    >
+                      <Star />
+                      <div className={`${styles.winnerText}`}>Winner</div>
+                    </div>
+                  </Popover>
+                }
+              </div>
+              <a className={styles.icon} href={link} target="_blank"><Github /></a>
+            </div>
+            <div className="body">{desc}</div>
+            <ul>
+              {points.map((point) => (
+                <li className={`${styles.point} body`}>{point}</li>
+              ))}
+            </ul>
+          </div>
+          <div className={styles.chipContainer}>
+            {tools.map((tool) => (
+              <div className={`${styles.toolChip} mini`}>{tool}</div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </Fade >
   )
 }
 AboutMe.propTypes = {
@@ -46,8 +89,8 @@ function AboutMe({ id }) {
       win: false,
       link: 'https://github.com/annxiesun/coda',
       points: [
-        'Implemented server-side functionalities with Axios',
-        'Integrated user-interface to with server'
+        'Implemented an infinite add to queue system that avoids duplicates',
+        'Designed endpoints that interacted with SpotifyAPI and integrated them with client-side functions',
       ],
       tools: [
         'React',
@@ -59,10 +102,12 @@ function AboutMe({ id }) {
       title: 'Ingrid',
       desc: 'A heat-map visualizer for Educational Apps',
       win: true,
+      hackathon: '3rd @ ULHacks',
       link: 'https://github.com/ul-hacks',
       points: [
         'Designed the UI and created mockups using Figma',
-        'Implemented front-end features and user-interface'
+        'Implemented the front-end, committing 1.2k+ lines',
+        'Created login and sign-in pages with error checking'
       ],
       tools: [
         'React',
@@ -75,10 +120,11 @@ function AboutMe({ id }) {
       title: 'Inclusify',
       desc: 'An app that detects non-inclusive language and suggests alternative words',
       win: true,
+      hackathon: 'Inclusivity Winner @ PearlHacks',
       link: 'https://github.com/annxiesun/inclusify',
       points: [
-        'Designed an intuitive user-experience',
-        'Implemented entire front-end'
+        'Designed and implemented a Grammarly-like UI that checks inputted text and suggests changes',
+        'Created branding & graphics for project'
       ],
       tools: [
         'React',
@@ -87,9 +133,14 @@ function AboutMe({ id }) {
     },
     {
       title: 'FeatherFinder',
-      desc: 'An elevated quiz experience that tells you what kind of bird you are',
-      win: true,
+      desc: 'An quiz that tells you what kind of bird you are!',
+      win: false,
       link: 'https://github.com/annxiesun/birdquiz',
+      points: [
+        'Designed and implemented quiz UI',
+        'Elevated quiz experience by implementing many animations and interactiveness',
+        'Created 8 custom tarot-card inspired illustrations for quiz results'
+      ],
       tools: [
         'React',
         'JavaScript'
@@ -101,8 +152,8 @@ function AboutMe({ id }) {
       <div className="section-container">
         <div className="h3 bold">My Projects</div>
         <div className={styles.projectContainer}>
-          {content.map((project) => (
-            <InfoSection key={project.title} project={project} />
+          {content.map((project, i) => (
+            <InfoSection i={i} key={project.title} project={project} />
           ))}
         </div>
         <br />

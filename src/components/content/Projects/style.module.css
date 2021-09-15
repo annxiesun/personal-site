@@ -6,6 +6,9 @@
   height: 400px;
   box-sizing: border-box;
   border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .projectContainer {
@@ -41,6 +44,36 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.winner {
+  color: white;
+  fill: white;
+  font-size: 16px;
+  -webkit-filter: drop-shadow( 0px 0px 2px rgba(255, 255, 255, .7));
+  filter: drop-shadow( 0px 0px 2px rgba(255, 255, 255, .7));
+  width: fit-content;
+  cursor: pointer;
+}
+
+.winnerText {
+  margin-left: 8px;
+}
+
+.popover {
+  background-color: rgba(255,255,255, 0.4);
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  font-size: 16px;
+}
+
+.triangle {
+  width: 10px;
+height: 10px;
+background-color: rgba(255,255,255, 0.4);
+clip-path: polygon(0 50%, 100% 0, 100% 100%);
+}
+
 @media screen and (max-width: 800px) {
   .boundingBox {
     width: 100%;
