@@ -30,6 +30,9 @@
 
 .header-link-container {
   z-index: 2;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .link-list {
   margin-right: 1em;
@@ -42,4 +45,10 @@
 
 .link-line {
   display: inline;
+}
+
+@media screen and (max-width: 500px) {
+  .link-list-0 {
+    margin-left: 1em;
+  }
 }

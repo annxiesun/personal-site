@@ -84,8 +84,7 @@ function Title({ id }) {
             return (<><a
               className={`body link link-list ${i === 0 ? 'link-list-0' : null}`}
               target="_blank"
-              href={link.link}
-              rel="noreferrer">{link.name}
+              href={link.link}>{link.name}
             </a>
             {i !== links.length - 1 &&  <p className="body link-line">|</p>}
             </>)
@@ -118,6 +117,10 @@ const links = [
     name: 'Art',
     link: 'https://www.instagram.com/axiannna_/',
   },
+  {
+    name: 'Resume',
+    link: `${window.location.href}/AnnieSunResume.pdf`
+  }
 ]
 
 export default Title;
