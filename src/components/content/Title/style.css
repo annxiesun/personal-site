@@ -21,8 +21,25 @@
   width: 100vw;
   height: 150vh;
   overflow: hidden;
+  z-index: 0;
 }
 
 .header-text {
   width: 100%;
+}
+
+.header-link-container {
+  z-index: 2;
+}
+.link-list {
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+.link-list-0 {
+  margin-left: 0em;
+}
+
+.link-line {
+  display: inline;
 }

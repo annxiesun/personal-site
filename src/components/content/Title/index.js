@@ -59,8 +59,8 @@ function Title({ id }) {
     const animateStarLeft = () => { animateStar(starContainer, height, 0, (width / 2), lastStartPoint.left) };
     const animateStarRight = () => { animateStar(starContainer, height, width / 2 * 1.4, width * 1.4, lastStartPoint.right) };
 
-    setInterval(animateStarLeft, 500);
-    setInterval(animateStarRight, 500);
+    //setInterval(animateStarLeft, 500);
+    //setInterval(animateStarRight, 500);
 
     function handleVisibilityChange() {
       console.log(document.hidden);
@@ -78,7 +78,19 @@ function Title({ id }) {
       <div className="header-container section-container">
         <div className="h1 header-text">Hello, I'm Annie Sun!</div>
         <div className="h2 header-text">— I make ideas come true</div>
-        <br/>
+        <br />
+        <div className="header-link-container">
+          {links.map((link, i) => {
+            return (<><a
+              className={`body link link-list ${i === 0 ? 'link-list-0' : null}`}
+              target="_blank"
+              href={link.link}
+              rel="noreferrer">{link.name}
+            </a>
+            {i !== links.length - 1 &&  <p className="body link-line">|</p>}
+            </>)
+          })}
+        </div>
       </div>
       <div id="star-container" className="star-container" />
     </div>
@@ -88,5 +100,24 @@ function Title({ id }) {
 Title.propTypes = {
   id: PropTypes.string.isRequired
 }
+
+const links = [
+  {
+    name: 'Github',
+    link: 'https://github.com/annxiesun',
+  },
+  {
+    name: 'Hackathons',
+    link: 'https://devpost.com/anniesun?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav',
+  },
+  {
+    name: 'Design',
+    link: 'https://www.behance.net/annxiesun/projects',
+  },
+  {
+    name: 'Art',
+    link: 'https://www.instagram.com/axiannna_/',
+  },
+]
 
 export default Title;

@@ -84,8 +84,37 @@ AboutMe.propTypes = {
 function AboutMe({ id }) {
   const content = [
     {
+      title: 'KoiUI',
+      desc: 'Mobile first UI Library for React Native',
+      win: false,
+      link: 'https://github.com/annxiesun/KoiUI',
+      points: [
+        'Allows developers to to customize CSS through theming, like in Material UI',
+        '5+ components made specifically for small screens, designed with atomic design principles',
+      ],
+      tools: [
+        'React Native',
+        'TypeScript',
+      ]
+    },
+    {
+      title: 'Asdaasfa',
+      desc: 'An online word game to play with friends',
+      win: false,
+      link: 'https://github.com/annxiesun/qhacks',
+      points: [
+        'Built Web-app with React and JavaScript',
+        'Backend built with Express and Socket.io was used to create online rooms',
+      ],
+      tools: [
+        'React',
+        'Express',
+        'Socket.io',
+      ]
+    },
+    {
       title: 'Coda',
-      desc: 'Quick-add songs to your spotify playlist',
+      desc: 'Tinder but for songs',
       win: false,
       link: 'https://github.com/annxiesun/coda',
       points: [
@@ -107,7 +136,7 @@ function AboutMe({ id }) {
       points: [
         'Designed the UI and created mockups using Figma',
         'Implemented the front-end',
-        'Created login and sign-in pages with error checking'
+        'Created functional authentication screens'
       ],
       tools: [
         'React',
@@ -116,7 +145,7 @@ function AboutMe({ id }) {
         'GraphQL'
       ]
     },
-    {
+    /*{
       title: 'Inclusify',
       desc: 'An app that detects non-inclusive language and suggests alternative words',
       win: true,
@@ -145,7 +174,7 @@ function AboutMe({ id }) {
         'React',
         'JavaScript'
       ]
-    },
+    },*/
   ];
   return (
     <div id={id} className="section">

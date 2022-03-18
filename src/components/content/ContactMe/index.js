@@ -137,7 +137,7 @@ function ContactMe({ id }) {
       <Fade>
         <div className="contact-container section-container">
           <div className="h3 bold">Contact Me</div>
-          <div className="body header-text">turn your idea into reality...</div>
+          <div className="body header-text">turn your idea into reality... (Send a message for a surprise!) </div>
           <br />
           {!sent &&
             <form className="form-container">

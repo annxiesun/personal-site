@@ -67,16 +67,25 @@ ProjectSection.propType = {
 function Projects({ id }) {
   const projects2 = [
     {
+      title: 'Reekon Tools — Boston Start-up',
+      desc: 'For the last four months, I have been working as a Mobile Developer at Reekon Tools, and I took on a lot of responsibility. \n\nIn my role, I was tasked with building a full-stack mobile app from scratch, and I was invovled with working at every part of the process. I designed and implemented the entire front-end of the app and I also helped with implementing their new API. ',
+      img: 'reekon.svg',
+      companySite: 'https://www.reekon.tools/',
+    },
+    {
       title: 'Enzuzo — Data Privacy Start-up',
-      desc: 'For the last four months, I worked as a web developer for Enzuzo, helping to design and implement a new onboarding experience & a new dashboard.\n\nBeing a start-up, I also became the resident graphic designer.', img: 'enzuzo.svg',
+      desc: 'For my first co-op, I worked as a web developer for Enzuzo, helping to design and implement a new onboarding experience & a new dashboard.\n\nBeing a start-up, I also became the resident graphic designer.',
+      img: 'enzuzo.svg',
       companySite: 'https://app.enzuzo.com/onboarding'
     },
     {
       title: 'Fashion for Change',
-      desc: 'In this non-profit organization, I took on the task of implementing the redesign of their website. (Work in progress!) \n\nFor the new site, I designed the architecture, implemented every page, and properly documented everything so future students can make easy updates.', img: 'fc.svg',
+      desc: 'In this non-profit organization, I took on the task of implementing the redesign of their website. (Work in progress!) \n\nFor the new site, I designed the architecture, implemented every page, and properly documented everything so future students can make easy updates.',
+      img: 'fc.svg',
       companySite: 'https://fc-site-main.herokuapp.com',
       gitLink: 'https://github.com/annxiesun/fc-site'
-    }, ,
+    }, 
+    
   ];
 
   return (
@@ -85,6 +94,8 @@ function Projects({ id }) {
         <div className="h3 bold mb_3">My Work</div>
         <div className="content-container">
           <div className="timeline">
+            <div className="small-circle" />
+            <div className="line" />
             <div className="small-circle" />
             <div className="line" />
             <div className="small-circle" />
