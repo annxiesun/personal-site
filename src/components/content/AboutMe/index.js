@@ -42,7 +42,7 @@ AboutMe.propTypes = {
 
 
 function AboutMe({ id }) {
-  const aboutMe = "Well, for one I have a lot passion AND the skills to back it up! I’m a computer science student, specializing in Human-Computer Interaction and I just love creating things!";
+  const aboutMe = "Well, for one I have a lot passion AND the skills to back it up! I’m a computer science student, pursuing a specialization in Human-Computer Interaction and also a minor in Fine Arts, and I love creating things!";
 
   const content = [
     { title: 'Mockups in a blink of an eye', desc: 'From wireframing to prototyping, low to high fidelity, get comprehensive and beautifully designed user-experiences quick & easily', animation: blink, media: 'animation' },
