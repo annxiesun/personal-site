@@ -59,8 +59,8 @@ function Title({ id }) {
     const animateStarLeft = () => { animateStar(starContainer, height, 0, (width / 2), lastStartPoint.left) };
     const animateStarRight = () => { animateStar(starContainer, height, width / 2 * 1.4, width * 1.4, lastStartPoint.right) };
 
-    //setInterval(animateStarLeft, 500);
-    //setInterval(animateStarRight, 500);
+    setInterval(animateStarLeft, 500);
+    setInterval(animateStarRight, 500);
 
     function handleVisibilityChange() {
       console.log(document.hidden);
