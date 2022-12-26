@@ -12,13 +12,14 @@
   display: flex;
   justify-content: center;
   height: 100vh !important;
+  max-height: 800px;
   flex-direction: column;
 }
 
 .star-container {
   position: absolute;
   top: 0;
-  width: 100vw;
+  width: 100%;
   height: 150vh;
   overflow: hidden;
   z-index: 0;
@@ -51,4 +52,35 @@
   .link-list-0 {
     margin-left: 1em;
   }
+}
+
+.title-resume {
+  transition: 0.2s;
+  z-index: 999;
+}
+.title-resume:hover {
+  transform: translateY(-5px);
+  transition: 0.2s;
+}
+
+.title-link {
+  position: relative;
+}
+
+.title-link:after {
+  bottom: -4px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  background: #fff;
+  opacity: 0.6;
+  transition: width 0.3s ease 0s, opacity 0.3s ease 0s;
+  width: 0;
+}
+
+.title-link:hover:after {
+  width: 100%;
+  opacity: 0.9;
 }

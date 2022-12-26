@@ -30,6 +30,10 @@
 .column-container {
   display: flex;
 }
+
+.about-me-description {
+  padding-top: var(--spacing2);
+}
 @media screen and (max-width: 700px) {
   .info-section {
     flex-direction: column;

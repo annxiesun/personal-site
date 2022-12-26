@@ -55,7 +55,7 @@ function AboutMe({ id }) {
       <div className="about-me-container section-container">
         <Fade>
           <div className="h3 bold">Why Choose Me?</div>
-          <div className="body">{aboutMe}</div>
+          <div className="body about-me-description">{aboutMe}</div>
         </Fade>
         <div className="column-container">
           {content.map((section, i) => (

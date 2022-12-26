@@ -18,9 +18,9 @@ function MasterView() {
 
   return (
     <Container className="site-container justifyCenter">
+      <SideMenu menuItems={menuItems} className="side-menu" />
       <Row className="site-content">
         <div className="gradient-background">
-          <SideMenu menuItems={menuItems} className="side-menu" />
           <Title id="title" />
           <img className="section-divider" src="resources/border.svg" />
           <AboutMe id="about-me" />

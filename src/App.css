@@ -29,7 +29,7 @@
 
 /* Text Styles */
 .h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Eurostar', sans-serif;
   font-size: 72px;
   color: white;
   font-weight: bold;
@@ -37,14 +37,14 @@
 
 .h2 {
   font-family: 'Poppins', sans-serif;
-  font-size: 40px;
+  font-size: 24px;
   color: white;
   font-weight: normal;
 }
 
 
 .h3 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Eurostar', sans-serif;
   font-size: 24px;
   color: white;
   font-weight: bold;
@@ -53,23 +53,22 @@
 .subtitle {
   font-size: 20px;
   font-weight: bold;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Eurostar', sans-serif;
   color: white;
 }
 
 .body {
-  font-size: 20px;
+  font-size: 16px;
   font-family: 'Poppins', sans-serif;
   color: white;
 }
 
 .link {
-  text-decoration: none !important;
+  text-decoration: none;
   cursor: pointer;
 }
 
 .link:hover {
-  text-decoration: underline !important;
   cursor: pointer;
 }
 
@@ -307,4 +306,9 @@
 
 .alignItemsCenter {
   align-items: center;
+}
+
+@font-face {
+  font-family: 'Eurostar';
+  src: url(./fonts/EuroStarBlack.ttf) format('truetype');
 }

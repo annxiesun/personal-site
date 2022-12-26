@@ -8,6 +8,8 @@ function ProjectSection({ project }) {
   const {
     title,
     desc,
+    role,
+    time,
     companySite,
     gitLink,
   } = project;
@@ -28,6 +30,14 @@ function ProjectSection({ project }) {
           <div className="project-bullets">
           </div>
           <div className="body">
+            {time}
+            <br/>
+            -
+            <br/>
+            {role}
+            <br/>
+            -
+            <br/>
             {desc}
           </div>
         </div>
@@ -67,24 +77,29 @@ ProjectSection.propType = {
 function Projects({ id }) {
   const projects2 = [
     {
-      title: 'Reekon Tools — Boston Start-up',
-      desc: 'For the last four months, I have been working as a Mobile Developer at Reekon Tools, and I took on a lot of responsibility. \n\nIn my role, I was tasked with building a full-stack mobile app from scratch, and I was invovled with working at every part of the process. I designed and implemented the entire front-end of the app and I also helped with implementing their new API. ',
+      title: 'Square',
+      time: 'Fall 2022',
+      role: 'Web Developer',
+      desc: 'For the last four months, I have been working as a Web Developer at Square! \n\nIn my role, I worked on one main user-facing project, and from that project, I got to experience the end-to-end process of building and releasing a new feature.',
+      img: 'square.svg',
+      companySite: 'https://squareup.com/ca/en',
+    },
+    {
+      title: 'Reekon — Hardware Start-up',
+      time: 'Winter 2022',
+      role: 'Mobile Developer',
+      desc: 'From my second co-op, I worked as a Mobile Developer at Reekon Tools, and I took on a lot of responsibility. \n\nIn my role, I was tasked with building a full-stack mobile app from scratch, and I was invovled with working at every part of the process. I designed and implemented the entire front-end of the app and I also helped with implementing their new API. ',
       img: 'reekon.svg',
       companySite: 'https://www.reekon.tools/',
     },
     {
       title: 'Enzuzo — Data Privacy Start-up',
+      time: 'Summer 2021',
+      role: 'Web Developer',
       desc: 'For my first co-op, I worked as a web developer for Enzuzo, helping to design and implement a new onboarding experience & a new dashboard.\n\nBeing a start-up, I also became the resident graphic designer.',
       img: 'enzuzo.svg',
       companySite: 'https://app.enzuzo.com/onboarding'
     },
-    {
-      title: 'Fashion for Change',
-      desc: 'In this non-profit organization, I took on the task of implementing the redesign of their website. (Work in progress!) \n\nFor the new site, I designed the architecture, implemented every page, and properly documented everything so future students can make easy updates.',
-      img: 'fc.svg',
-      companySite: 'https://fc-site-main.herokuapp.com',
-      gitLink: 'https://github.com/annxiesun/fc-site'
-    }, 
     
   ];
 

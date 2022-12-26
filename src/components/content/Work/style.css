@@ -21,13 +21,13 @@
 }
 
 .project-text {
-  width: 50%;
+  width: 40%;
   white-space: pre-wrap;
 }
 
 /* mock website styles */
 .mock-website-container {
-  width: 50%;
+  width: 60%;
   margin-left: var(--spacing6);
 }
 
