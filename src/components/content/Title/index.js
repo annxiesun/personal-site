@@ -115,7 +115,7 @@ const links = [
   },
   {
     name: 'Art',
-    link: 'https://www.instagram.com/axiannna_/',
+    link: 'https://www.instagram.com/thisisannieeeeee/?hl=en',
   },
   {
     name: 'Resume',
