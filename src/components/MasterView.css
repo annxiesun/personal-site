@@ -43,7 +43,7 @@ body {
 }
 
 .section-divider {
-  width: 80%;
+  width: 100%;
   box-sizing: border-box;
   padding: 0 var(--spacing4);
 }
